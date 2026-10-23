@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Knife Throw - Endless Levels</title>
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #101827;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  width: min(94%, 500px);
+  text-align: center;
+}
+
+h1 { color: #ffbd59; letter-spacing: 4px; }
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  background: #1d293b;
+  padding: 14px 5px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  background: #111d2d;
+  border: 2px solid #35445a;
+  border-radius: 15px;
+  touch-action: manipulation;
+}
+
+button {
+  border: 0;
+  border-radius: 25px;
+  padding: 13px 22px;
+  margin: 10px 4px 0;
+  background: #ffbd59;
+  color: #222;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#message {
+  color: #b8c7da;
+  min-height: 24px;
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <h1>KNIFE THROW</h1>
+
+  <div class="info">
+    <div>Skor<br><b id="score">0</b></div>
+    <div>Level<br><b id="level">1</b></div>
+    <div>Sisa<br><b id="remaining">6</b></div>
+  </div>
+
+  <canvas id="game" width="500" height="560"></canvas>
+
+  <div>
+    <button id="throwBtn">?? LEMPAR</button>
+    <button id="restartBtn">ULANGI</button>
+  </div>
+
+  <p id="message">Klik LEMPAR atau tekan SPASI!</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
